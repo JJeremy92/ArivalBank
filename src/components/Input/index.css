@@ -1,0 +1,14 @@
+.error {
+  content: url("./../../assets/images/alert.svg");
+  display: inline-block;
+  margin-left: 8px;
+  position: absolute;
+  right: 12px;
+  top: 38px;
+}
+
+.error-text {
+  color: red;
+  position: absolute;
+  top: 60px;
+}

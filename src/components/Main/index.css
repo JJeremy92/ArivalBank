@@ -1,0 +1,12 @@
+.welcome {
+  background-color: rgb(37, 141, 56);
+  color: white;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 72px;
+  width: 100vw;
+  height: 100vh;
+}
