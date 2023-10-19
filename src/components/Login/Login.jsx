@@ -4,6 +4,12 @@ import Input from "../Input/Input";
 import { validation } from "../../utils/validation";
 import "./index.css";
 
+const STAGE_PROCESS = {
+  INITIAL_INFO: 1,
+  PASSWORD_SCREEN: 2,
+  REVIEW: 3,
+}
+    
 export default ({ onNextStage, buttonText, currentStage }) => {
   const [countries, setCountries] = useState([]);
   const [currentCountry, setCurrentCountry] = useState(null);
@@ -94,7 +100,7 @@ export default ({ onNextStage, buttonText, currentStage }) => {
   };
 
   const viewForStage = (stage) => {
-    if (stage === 0) {
+    if (stage === STAGE_PROCESS.INITIAL_INFO) {
       return (
         <>
           <div className="login__form__control">
@@ -135,7 +141,7 @@ export default ({ onNextStage, buttonText, currentStage }) => {
           </button>
         </>
       );
-    } else if (stage === 1) {
+    } else if (stage === STAGE_PROCESS.PASSWORD_SCREEN) {
       return (
         <>
           <div className="login__form__control">
@@ -168,7 +174,7 @@ export default ({ onNextStage, buttonText, currentStage }) => {
           </button>
         </>
       );
-    } else if (stage === 2) {
+    } else if (stage === STAGE_PROCESS.REVIEW) {
       return (
         <>
           <div className="user-info">
